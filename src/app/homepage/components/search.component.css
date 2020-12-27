@@ -1,15 +1,17 @@
 .hero {
-    background: url('https://media.istockphoto.com/photos/logistics-and-transportation-of-container-cargo-ship-and-cargo-plane-picture-id968819844') center center / cover no-repeat;
+    background: url('./../../../assets/images/pexels-martin-damboldt-799091.jpg') center center / cover no-repeat;
     position: relative;
     width: 100%;
     padding: 0;
     display: flex;
     align-items: center;
-    min-height: 465px;
+    min-height: 565px;
   }
   
   .hero .search {
+    width: 60%;
     position: relative;
+    margin: auto;
     z-index: 2;
   }
   
@@ -77,4 +79,13 @@
     font-size: 2rem;
     line-height: 24px;
     color: #fff;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    ::placeholder{
+      font-size: 15px;
+    }
+    .hero .search input{
+      font-size: 15px;
+    }
   }
