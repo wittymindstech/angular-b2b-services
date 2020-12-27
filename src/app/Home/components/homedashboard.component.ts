@@ -1,6 +1,6 @@
 import { Router } from '@angular/router';
 import { HomePageService } from './../services/home.service';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
  @Component({
      selector:"Homedashboard",
@@ -8,9 +8,13 @@ import { Component } from '@angular/core';
  })
 
  export class HomeDashboardComponent{
-     constructor(public service:HomePageService, public Router:Router){}
-    public data:any;
-     public ngOnInit(){
-         
+    @Input() Data:any;
+    constructor(public service:HomePageService, public Router:Router){}
+    
+    public ngOnInit(){
+        this.Data={
+            length:0
+        }
+        console.log(this.Data);
      }
  }

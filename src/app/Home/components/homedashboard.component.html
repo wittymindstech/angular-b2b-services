@@ -1,7 +1,35 @@
-<section style="width:90%; margin: auto; margin-top: 30px;">
-    <div>
-        <h1 class="display-5">Popular Business</h1>
+
+<div *ngIf= "Data.length>0">
+  <section class="display" style="width:90%; margin: auto; margin-top: 30px;">
+    <h1  class="display-5">Result</h1>
+    <div> 
+      <span class="carddisplay" *ngFor=" let service of Data;" style="padding :25px; float: left">     
+            <div class="card" style="width: 18rem; background-color: #323A4C; color: white; margin-top: 15px;">
+              <img src= "{{service.image}}" height="250px" class="card-img-top" alt="TajHotel">
+              <div class="card-body">
+                <h5 class="card-title">{{ service.Service_name}} <sup><span class="badge rounded-pill bg-info text-dark" style="font-size: 10px;" > Service </span></sup> </h5>
+                <p class="card-text">{{service.Service_info}}</p>
+                <p class="card-text"> <b>Location:</b> {{service.Service_city}}</p>
+                <p class="card-text"> <b>Cost:</b> {{service.Service_charge}}</p>
+                <a href="#" class="btn btn-outline-light">View</a>
+              </div>
+            </div>
+      </span>
     </div>
+    <hr style="clear: both;">
+  </section>
+
+</div>
+<div *ngIf= "Data['result'] == 'No result Found' ">
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Opps!</strong> It seems like service not available at selected city. You can still check this out.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+</div>
+<div *ngIf ="Data.length == 0 || Data['result'] == 'No result Found' ">
+<section style="width:90%; margin: auto; margin-top: 30px;">
+  <h1 class="display-5">Popular business</h1>
+    
     <div style="margin-top: 50px;">
         <div class="card" style="width: 18rem; background-color: #323A4C; color: white;  float: left; margin-left: 45px;">
             <img src="../../../assets/Taj Hotel.jpg" height="250px"  class="card-img-top" alt="TajHotel">
@@ -24,7 +52,8 @@
         <div class="card" style="width: 18rem; background-color: #323A4C; color: white; float: left; margin-left: 45px; margin-right: 45px;">
             <img src="../../../assets/ITC mugal resort.jpg" height="250px" class="card-img-top" alt="TajHotel">
             <div class="card-body">
-              <h5 class="card-title">ITC mugal resort</h5>
+              
+              <h5 class="card-title">ITC mugal resort <sup><span class="badge rounded-pill bg-info text-dark" style="font-size: 10px;">Business</span></sup> </h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               <a href="#" class="btn btn-outline-light">View</a>
             </div>
@@ -89,3 +118,4 @@
         
     </div>
   </section>
+</div>

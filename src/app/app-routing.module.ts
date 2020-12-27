@@ -6,8 +6,9 @@ const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forRoot([
-    {path:"",loadChildren:()=> import("./Home/model/home.module").then(obj=>obj.homeModule)},
-    {path:"login",loadChildren:()=>import("./Login/module/login.module").then(obj=>obj.LoginModule)}
+    {path:"first",loadChildren:()=> import("./Home/model/home.module").then(obj=>obj.homeModule)},
+    {path:"login",loadChildren:()=>import("./Login/module/login.module").then(obj=>obj.LoginModule)},
+    {path:"",loadChildren:()=>import("./homepage/module/homepage.module").then(obj=>obj.HomePageModule)}
   ])],
   exports: [RouterModule]
 })
