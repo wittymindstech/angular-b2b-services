@@ -1,0 +1,21 @@
+.button7
+{
+display:inline-block;
+padding:0.7em 1.7em;
+margin:0 0.3em 0.3em 0;
+border-radius:0.2em;
+box-sizing: border-box;
+text-decoration:none;
+font-family:'Roboto',sans-serif;
+font-weight:400;
+color:#FFFFFF;
+background-color:#F9A620;
+text-align:center;
+}
+
+@media all and (max-width:30em){
+a.button7{
+display:block;
+margin:0.4em auto;
+}
+}

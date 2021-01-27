@@ -8,7 +8,8 @@ const routes: Routes = [];
   imports: [RouterModule.forRoot([
     {path:"first",loadChildren:()=> import("./Home/model/home.module").then(obj=>obj.homeModule)},
     {path:"login",loadChildren:()=>import("./Login/module/login.module").then(obj=>obj.LoginModule)},
-    {path:"",loadChildren:()=>import("./homepage/module/homepage.module").then(obj=>obj.HomePageModule)}
+    {path:"",loadChildren:()=>import("./homepage/module/homepage.module").then(obj=>obj.HomePageModule)},
+    {path:"dashboard",loadChildren:()=>import("./Dashboard/module/dashboard.module").then(obj=>obj.DashboardModule)},
   ])],
   exports: [RouterModule]
 })

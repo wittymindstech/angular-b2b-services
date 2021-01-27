@@ -56,19 +56,42 @@
     outline: 0;
   }
   
-  .hero .search button {
+  .hero .search #submit{
     position: absolute;
     top: 6px;
     right: 6px;
     color: #fff;
-    background: #D8C192;
+    /*background: #D8C192;*/
+    background: #F9A620;
     font-size: 27px;
     height: 65px;
     line-height: 65px;
     width: 68px;
     padding: 0;
     border: 0;
-    border-radius: 50%;
+    border-radius: 0 50% 50% 0;
+  }
+
+  #dropdown {
+    position: absolute;
+    top: 6px;
+    right: 75px;
+    color: #fff;
+    background: #F9A620;
+    font-size: 15px;
+    height: 65px;
+    width: 10%;
+    line-height: 65px;
+    padding: 0 3px;
+    border: 0;
+    z-index: 2;
+    cursor: pointer;
+  }
+  
+  #dropdown-item{
+  
+    color: black;
+    background: white;
   }
   
   .fa-search {

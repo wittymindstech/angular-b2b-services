@@ -11,30 +11,24 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown" style="width: 50%; ">
         <ul class="nav nav-pills" style=" font-size:medium; font-weight: 500;">
           <li class="nav-item">
-            <a class="nav-link" style="color: white;" href="#carouselExampleCaptions">Home</a>
+            <a class="nav-link" style="color: white;" href="#">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" style="color: white;" href="#newsandupdate">News and Updates</a>
+            <a class="nav-link" style="color: white;" href="#">MyCourses</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" style="color: white;" href="#Coursebooking">Course Booking</a>
+            <a class="nav-link" style="color: white;" href="#">Cart</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" style="color: white;" href="#about">AboutUs</a>
+            <a class="nav-link" style="color: white;" href="#">Wishlist</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" style="color: white;" href="#contact">ContactUs</a>
+            <a class="nav-link" style="color: white;"> Welcomw {{userdetail['Username']}}</a>
           </li>
-         <!-- <li class="nav-item"> 
-            <button class="btn btn-sm btn-outline-light" type="button" [routerLink]="['login']" style="margin-right:5px;">Login</button>
-          </li>
-          <li class="nav-item">
-            <button class="btn btn-sm btn-outline-light" type="button">Registration</button>
-          </li>-->
         </ul>
         
-          <a [routerLink]="['login']" class="button7" style="background-color:#FFD449">Login</a>
-          <a href="#" class="button7" style="background-color:#CCCCCC; color:#000000">Register</a>
+          <a class="button7" style="background-color:#2979FF" (click)="Logout()">Logout</a>
+          <!--<a href="#" class="button7" style="background-color:#CCCCCC; color:#000000">Register</a>-->
       
       </div>
 

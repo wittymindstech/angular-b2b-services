@@ -1,3 +1,4 @@
+import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 @Injectable({
@@ -7,7 +8,9 @@ import { Injectable } from '@angular/core';
 export class loginService{
     constructor(public http:HttpClient){}
 
-    public getdata(){
-        return "Welcome Back, Login to your Account.";
+    public getlogin(data):Observable<any>{
+
+        return this.http.post("http://localhost:8080/login",data)
     }
-}
+       
+};
