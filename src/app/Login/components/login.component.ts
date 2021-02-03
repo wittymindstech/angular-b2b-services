@@ -29,7 +29,7 @@ export class loginComponent{
             }
             else{
 
-                this.result=posRes
+                this.result=posRes['result']
                 console.log(this.result)
             }
          },(errRes:HttpErrorResponse)=>{

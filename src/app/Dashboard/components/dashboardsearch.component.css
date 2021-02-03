@@ -1,0 +1,114 @@
+.hero {
+    background: url('./../../../assets/images/pexels-martin-damboldt-799091.jpg') center center / cover no-repeat;
+    position: relative;
+    width: 100%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    min-height: 565px;
+  }
+  
+  .hero .search {
+    width: 60%;
+    position: relative;
+    margin: auto;
+    z-index: 2;
+  }
+  
+  ::placeholder {
+    color: #fff;
+    position: relative;
+  }
+  
+  .hero .search span {
+    display: none;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    position: absolute;
+    top: calc(50% - 10px);
+    left: 15px;
+    z-index: 1;
+    cursor: pointer;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    opacity: 0.3;
+  }
+  
+  .hero .search--active span {
+    display: block;
+  }
+  
+  .hero .search input {
+    width: 100%;
+    height: 76px;
+    line-height: 76px;
+    border-radius: 50px;
+    border: 1px solid #222;
+    background: rgba(0, 0, 0, 0.7);
+    font-size: 27px;
+    padding: 5px 5px 5px 64px;
+    color: #fff;
+    position: relative;
+  }
+  
+  .search input:focus {
+    outline: 0;
+  }
+  
+  .hero .search #submit{
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    color: #fff;
+    /*background: #D8C192;*/
+    background: #F9A620;
+    font-size: 27px;
+    height: 65px;
+    line-height: 65px;
+    width: 68px;
+    padding: 0;
+    border: 0;
+    border-radius: 0 50% 50% 0;
+  }
+
+  #dropdown {
+    position: absolute;
+    top: 6px;
+    right: 75px;
+    color: #fff;
+    background: #F9A620;
+    font-size: 15px;
+    height: 65px;
+    width: 10%;
+    line-height: 65px;
+    padding: 0 3px;
+    border: 0;
+    z-index: 2;
+    cursor: pointer;
+  }
+  
+  #dropdown-item{
+  
+    color: black;
+    background: white;
+  }
+  
+  .fa-search {
+    color: #555;
+  }
+  
+  .fa-times-circle {
+    font-size: 2rem;
+    line-height: 24px;
+    color: #fff;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    ::placeholder{
+      font-size: 15px;
+    }
+    .hero .search input{
+      font-size: 15px;
+    }
+  }

@@ -1,4 +1,28 @@
 <Dashboardheader>
 
 </Dashboardheader>
-<h1>{{ user_details | json }}</h1>
+
+<!--<dashboardsearch>
+
+</dashboardsearch>-->
+
+<div style="width:90%; margin: auto; margin-top: 30px;">
+    <h1 class="display-5">Courses Available</h1>
+    <div>
+      <span class="carddisplay" *ngFor=" let course of data;" style="padding :25px; float: left">
+        <div class="card" style="width: 18rem; background-color: #323A4C; color: white; margin-top: 15px;">
+          <img src="" height="250px" class="card-img-top" alt="TajHotel">
+          <div class="card-body">
+            <h5 class="card-title">{{course.Name}} <sup><span class="badge rounded-pill bg-info text-dark"
+                  style="font-size: 10px;"> {{ course.Category}} </span></sup> </h5>
+            <p class="card-text">{{course.About}}</p>
+            <p class="card-text"> <b>Rating:</b> {{course.Rating}}</p>
+            <p class="card-text"> <b>Duration:</b> {{course.Duration}}</p>
+            <p class="card-text"> <b>Cost:</b> {{course.Price | currency}}</p>
+            <a href="#" class="btn btn-outline-light">Add to cart</a>
+          </div>
+        </div>
+      </span>
+    </div>
+    <hr style="clear: both;">
+  </div>

@@ -1,0 +1,67 @@
+<div *ngIf="result['result'] == 'No result Found' ">
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <strong>Opps!</strong> It seems like searched course is not available.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+</div>
+<section class="hero">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="search">
+          <form data-toggle="validator" data-focus="false" role="form" autocomplete="off">
+            <div class="form-group has-error has-danger">
+              <span><i class="fa fa-times-circle"></i></span>
+              <select id="dropdown" name="categoty" [(ngModel)]="Category">
+                <option id="dropdown-item" selected value="select">Category</option>
+                <!--<optgroup id="dropdown-item" label="Boats">
+                  <option value="1">Option 1.1</option>
+                  <option value="2">Option 1.2</option>
+                </optgroup>-->
+                <option id="dropdown-item" value="Building and Repair">Building and Repair</option>
+                <option id="dropdown-item" value="Law and Insurance">Law and Insurance</option>
+                <option id="dropdown-item" value="Management offshore">Management offshore</option>
+                <option id="dropdown-item" value="Safety and Security">Safety and Security</option>
+                <option id="dropdown-item" value="Shipping">Shipping</option>
+                <option id="dropdown-item" value="Surveying">Surveying</option>
+                <option id="dropdown-item" value="Yatch">Yatch</option>
+              </select>
+              <input [(ngModel)]="Textdata" class="input" type="text" name="q"
+                placeholder="Search Your Shipping Courses..." required data-error="Please enter a search term">
+              <button (click)="getCourses({'input':Textdata,'Category':Category })" type="submit" id="submit"
+                class="disabled"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-search" viewBox="0 0 16 16">
+                  <path
+                    d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                </svg></button>
+
+              <div class="help-block with-errors">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div *ngIf="displayResult == true && result['result']!='No result Found'"
+  style="width:90%; margin: auto; margin-top: 30px;">
+  <h1 class="display-5">Result</h1>
+  <div>
+    <span class="carddisplay" *ngFor=" let course of result;" style="padding :25px; float: left">
+      <div class="card" style="width: 18rem; background-color: #323A4C; color: white; margin-top: 15px;">
+        <img src="" height="250px" class="card-img-top" alt="TajHotel">
+        <div class="card-body">
+          <h5 class="card-title">{{course.Name}} <sup><span class="badge rounded-pill bg-info text-dark"
+                style="font-size: 10px;"> {{ course.Category}} </span></sup> </h5>
+          <p class="card-text">{{course.About}}</p>
+          <p class="card-text"> <b>Rating:</b> {{course.Rating}}</p>
+          <p class="card-text"> <b>Duration:</b> {{course.Duration}}</p>
+          <p class="card-text"> <b>Cost:</b> {{course.Price | currency}}</p>
+          <a href="#" class="btn btn-outline-light">Add to cart</a>
+        </div>
+      </div>
+    </span>
+  </div>
+  <hr style="clear: both;">
+</div>

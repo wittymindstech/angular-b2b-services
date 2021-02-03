@@ -1,19 +1,19 @@
+import { DashboardSearchService } from './../service/dashboardsearch.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { SearchService } from './../services/search.service';
 import { Component } from '@angular/core';
 @Component({
-    selector:"search",
-    templateUrl:"./search.component.html",
-    styleUrls:['search.component.css']
+    selector:"dashboardsearch",
+    templateUrl:"./dashboardsearch.component.html",
+    styleUrls:['dashboardsearch.component.css']
 })
 
-export class SearchComponent{
-    constructor(public Service:SearchService,public Route:Router ){}
+export class DashboardSearchComponent{
+    constructor(public Service:DashboardSearchService,public Route:Router ){}
     public Textdata:any;
     public Category:any;
     public data:any;
-    public result:any={result:''};
+    public result:any;
     public displayResult:any=false;
     public getCourses(data)
     {
