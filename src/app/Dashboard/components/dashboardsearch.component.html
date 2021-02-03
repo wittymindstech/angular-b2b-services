@@ -50,7 +50,7 @@
   <div>
     <span class="carddisplay" *ngFor=" let course of result;" style="padding :25px; float: left">
       <div class="card" style="width: 18rem; background-color: #323A4C; color: white; margin-top: 15px;">
-        <img src="" height="250px" class="card-img-top" alt="TajHotel">
+        <img src="{{ course.image }}" height="250px" class="card-img-top" alt="TajHotel">
         <div class="card-body">
           <h5 class="card-title">{{course.Name}} <sup><span class="badge rounded-pill bg-info text-dark"
                 style="font-size: 10px;"> {{ course.Category}} </span></sup> </h5>

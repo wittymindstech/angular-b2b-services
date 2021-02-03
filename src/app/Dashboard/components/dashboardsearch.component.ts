@@ -13,7 +13,7 @@ export class DashboardSearchComponent{
     public Textdata:any;
     public Category:any;
     public data:any;
-    public result:any;
+    public result={result:''};
     public displayResult:any=false;
     public getCourses(data)
     {
