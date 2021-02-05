@@ -80,7 +80,7 @@
     background: #F9A620;
     font-size: 15px;
     height: 65px;
-    width: 10%;
+    width: 78px;
     line-height: 65px;
     padding: 0 3px;
     border: 0;
@@ -110,5 +110,19 @@
     }
     .hero .search input{
       font-size: 15px;
+      height: 50px;
+    }
+    .hero .search {
+      width: 90%;
+    }
+    .hero .search #submit{
+      width: 48px;
+      height: 40px;
+    }
+    #dropdown{
+      position: absolute;
+      top: 6px;
+      right: 55px;
+      height: 40px;
     }
   }

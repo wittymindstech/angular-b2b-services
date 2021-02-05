@@ -10,6 +10,6 @@ export class HomePageService{
 
         }
         public getdata(input_datails):Observable<any>{
-            return this.http.post("http://localhost:8080/api/getservice",input_datails)
+            return this.http.post("https://npk-server.herokuapp.com/api/getservice",input_datails)
         }
 }

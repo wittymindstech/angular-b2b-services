@@ -10,6 +10,6 @@ export class DashboardSearchService{
 
         }
         public GetCourses(input_datails):Observable<any>{
-            return this.http.post("http://localhost:8080/search",input_datails)
+            return this.http.post("https://npk-server.herokuapp.com/search",input_datails)
         }
 }

@@ -1,7 +1,9 @@
 <Dashboardheader>
 
 </Dashboardheader>
+<router-outlet>
 
+</router-outlet>
 <dashboardsearch>
 
 </dashboardsearch>
@@ -10,16 +12,19 @@
     <h1 class="display-5">Courses Available</h1>
     <div>
       <span class="carddisplay" *ngFor=" let course of data;" style="padding :25px; float: left">
-        <div class="card" style="width: 18rem; height: 30rem; background-color: #323A4C; color: white; margin-top: 15px;">
-          <img src="{{ course.image }}" height="150px" class="card-img-top" alt="TajHotel">
+        <div class="card" style="width: 18rem; height: 30rem; background-color: #f1f1f1; margin-top: 15px;">
+          <img src="{{ course.image }}" height="150px" class="card-img-top" alt="coursepic">
           <div class="card-body">
-            <h5 class="card-title">{{course.Name}} <sup><span class="badge rounded-pill bg-info text-dark"
-                  style="font-size: 10px;"> {{ course.Category}} </span></sup> </h5>
+            <h5 class="card-title"><a [routerLink]="['coursedetail']" style="cursor: pointer; text-decoration: none; color: #43D1F9;"> {{course.Name}}</a><sup><span class="badge rounded-pill bg-info text-dark"
+                  style="font-size: 10px; background-color: #FFD449;"> {{ course.Category}} </span></sup> </h5>
             <!--<p class="card-text">{{course.About}}</p>-->
             <p class="card-text"> <b>Rating:</b> {{course.Rating}}</p>
             <p class="card-text"> <b>Duration:</b> {{course.Duration}}</p>
             <p class="card-text"> <b>Cost:</b> {{course.Price | currency}}</p>
-            <a href="#" class="btn btn-outline-light">Add to cart</a>
+            <div style="position: absolute; bottom: 10px;">
+              <a style="background-color: #43D1F9; color: white;" class="btn">Add to cart</a>
+              <a style="margin-left: 5px; background-color: #43D1F9; color: white;" class="btn">Add to Wishlist</a>
+            </div>
           </div>
         </div>
       </span>

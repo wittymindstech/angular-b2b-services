@@ -10,7 +10,7 @@ export class loginService{
 
     public getlogin(data):Observable<any>{
 
-        return this.http.post("http://localhost:8080/login",data)
+        return this.http.post("https://npk-server.herokuapp.com/login",data)
     }
        
 };

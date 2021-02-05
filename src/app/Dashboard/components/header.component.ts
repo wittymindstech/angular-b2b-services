@@ -13,10 +13,10 @@ export class DashboardheaderComponent{
     constructor(public Router:Router){}
     userdetail=login.details;
     Logout(){
-
+        if(window.confirm("Are you sure to want to Logout?")){
         login.islogin=false;
         login.details={};
 
-        this.Router.navigate([""])
+        this.Router.navigate([""])}
     }
 }

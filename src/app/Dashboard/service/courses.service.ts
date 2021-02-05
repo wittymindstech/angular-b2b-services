@@ -10,6 +10,6 @@ export class CoursesService{
 
         }
         public GetCourses():Observable<any>{
-            return this.http.get("http://localhost:8080/getallcourses")
+            return this.http.get("https://npk-server.herokuapp.com/getallcourses")
         }
 }
