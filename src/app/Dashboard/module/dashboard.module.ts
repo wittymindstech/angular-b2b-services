@@ -1,3 +1,4 @@
+import { CartService } from './../service/cart.service';
 import { CartComponent } from './../components/cart.component';
 import { CoursesService } from './../service/courses.service';
 import { DashboardSearchService } from './../service/dashboardsearch.service';
@@ -19,7 +20,7 @@ import { FormsModule } from '@angular/forms';
                                    {path:"cart", component:CartComponent},
                                    {path:"coursedetail",component:CoursedetailComponent}
         ])],
-    providers:[DashboardSearchService,CoursesService],
+    providers:[DashboardSearchService,CoursesService,CartService,DashboardheaderComponent],
     exports:[LandingpageComponent]
 })
 export class DashboardModule{};

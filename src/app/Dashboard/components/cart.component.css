@@ -1,0 +1,12 @@
+#cart-body{
+    
+        background: #ffffff;
+        /*background: -webkit-linear-gradient(to right, #eecda3, #ef629f);*/
+        /*background: linear-gradient(to right, #eecda3, #ef629f);*/
+        min-height: 100vh;
+     
+}
+.row{
+        /*border-left: 10px solid #43D1F9;*/
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
