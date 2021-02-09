@@ -43,6 +43,12 @@
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
           </div>
         </div>
+        <div *ngIf="clicked == 'yes' ">
+          <div class="alert alert-danger alert-dismissible fade show" role="alert">
+            <strong>Please Wait!</strong>logging in...
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        </div>
         <div class="text-center p-t-12">
           <span class="txt1">
             Forgot

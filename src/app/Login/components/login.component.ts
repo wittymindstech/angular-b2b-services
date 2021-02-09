@@ -16,16 +16,17 @@ export class loginComponent{
     public Email:any;
     public Password:any;
     public result:any="";
-    
+    public clicked="no"
      public getlogin(data){
+
+        
 
         if(data.Email== null || data.Password== null){
             window.alert("Please Enter Correct Values...")
             return
         }
 
-       
-
+            this.clicked="yes"
          this.service.getlogin(data).subscribe((posRes)=>{
 
             if(posRes.result!="User not found")
@@ -37,7 +38,7 @@ export class loginComponent{
                 this.Router.navigate(["dashboard"]);
             }
             else{
-
+                this.clicked="no"
                 this.result=posRes['result']
                 console.log(this.result)
             }

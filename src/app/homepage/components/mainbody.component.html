@@ -1,5 +1,9 @@
 <script src="./../../../assets/javascript/news-slider.js"></script>
-
+<style>
+    .card{
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+  </style>
 <div data-bs-spy="scroll" data-bs-target="#navbar navbar-expand-lg navbar-light" data-bs-offset="0" tabindex="0">
 
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
@@ -110,110 +114,169 @@
     <!-- Course Booking -->
     <h1 class="display-5" id="Coursebooking" style=" text-align: center; background-color:#43D1F9 ; padding: 20px;;">
         Course Booking </h1>
-    <div class="container">
-        <div class="row mb-5">
-            <div class="col">
-                <h5 class="mt-3" >We  Are Government Sub-Organization Making People Ready To Sail The Great Sea With Pride . </h5>
-                  <h5> Some OF Our  Best Courses  To Make Your Way  To Ship  In  NPK-KNOT</h5>
-               
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4" style="margin-top: 10px;">
-                <div class="card">
-                    <img src="./../../../assets/images/pn.jpg" height="200" class="card-img-top" alt="...">
-                    <div class="card-body" style="background-color: #43D1F9 ">
-                        <h5 class="card-title">GMDSS</h5>
-                        <p class="card-text"> GLOBAL MARITIME DISTRESS AND SAFETY SYSTEM</p>
-                        <h5>(Category : Deck)</h5>
-                        <h6>Price: Rs.12,600.00<br>
-                            Course Length: 70 hours<br>
-                            Rating: 8/10<br>
-                            </h6>
-                        <a href="#" class="btn btn-light">Read more..</a>
+        <div style="width:90%; margin: auto; margin-top: 30px;">
+            <h1 class="display-5">Courses Available</h1>
+            <div>
+              <span class="carddisplay" style="padding :25px; float: left">
+                <div class="card" style="width: 18rem; height: 30rem; background-color: #f1f1f1; margin-top: 15px;">
+                  <img src="https://npk-server.herokuapp.com/courses/images/image-1612376145142.jpg" height="150px" class="card-img-top" alt="coursepic">
+                  <div class="card-body">
+                    <h5 class="card-title"><a [routerLink]="['coursedetail']" style="cursor: pointer; text-decoration: none; color: #43D1F9;"> OPERATING PRINCIPLES OF MARINE PROPULSION PLANTS (MIDATL-337)</a><sup><span class="badge rounded-pill bg-warning text-dark"
+                          style="font-size: 10px; background-color: #FFD449;">Superyachts </span></sup> </h5>
+                    <!--<p class="card-text">{{course.About}}</p>-->
+                    <p class="card-text"> <b>Rating:</b> 4</p>
+                    <p class="card-text"> <b>Duration:</b> 50hr </p>
+                    <p class="card-text"> <b>Cost:</b> 3500 </p>
+                    <div style="position: absolute; bottom: 10px;">
+                      <a style="background-color: #43D1F9; color: white;" class="btn" >Add to cart</a>
+                      <a style="margin-left: 5px; background-color: #43D1F9; color: white;" class="btn">Add to Wishlist</a>
                     </div>
+                  </div>
                 </div>
+              </span>
             </div>
-            <div class="col-sm-4" style="margin-top: 10px;">
-                <div class="card">
-                    <img src="./../../../assets/images/pp.jpg" height="200" class="card-img-top" alt="...">
-                    <div class="card-body" style="background-color: #43D1F9">
-                        <h5 class="card-title">MIDATL-276</h5>
-                        <p class="card-text">MARINE SAFETY INSTRUCTOR </p>
-                        <h5>(Category : Deck)</h5>
-                            <h6>Price: Rs.19,600.00<br>
-                                Course Length: 50 hours<br>
-                                Rating: 7/10<br>
-                                </h6>
-                       
-                        <a href="#" class="btn btn-light">Read more..</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4" style="margin-top: 10px;">
-                <div class="card">
-                    <img src="./../../../assets/images/pq.jpg" height="200" class="card-img-top" alt="...">
-                    <div class="card-body" style="background-color: #43D1F9">
-                        <h5 class="card-title">(MIDATL-337)</h5>
-                        <p class="card-text">OPERATING PRINCIPLES OF MARINE PROPULSION PLANTS</p>
-                        <h5>(Category : Deck)</h5>
-                            <h6>Price: Rs.12,600.00<br>
-                                Course Length: 70 hours<br>
-                                Rating: 8/10<br>
-                                </h6>
-                        
-                        <a href="#" class="btn btn-light">Read more..</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4" style="margin-top: 20px;">
-                <div class="card">
-                    <img src="./../../../assets/images/pr.jpg" height="200" class="card-img-top" alt="...">
-                    <div class="card-body" style="background-color: #43D1F9">
-                        <h5 class="card-title">(MIDATL-156)</h5>
-                        <p class="card-text">DESIGNATED DUTY ENGINEER (DDE) 1000-4000 HORSEPOWER</p>
-                        <h5>(Category : Engine)</h5>
-                            <h6>Price: Rs.12,600.00<br>
-                                Course Length: 70 hours<br>
-                                Rating: 8/10<br>
-                                </h6>
-                        <a href="#" class="btn btn-light">Read more..</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4" style="margin-top: 20px;">
-                <div class="card">
-                    <img src="./../../../assets/images/ps.png" height="200" class="card-img-top" alt="...">
-                    <div class="card-body" style="background-color: #43D1F9">
-                        <h5 class="card-title">FOWT(MIDATL-384) </h5>
-                        <p class="card-text">QUALIFIED MEMBER OF THE ENGINEERING DEPARTMENT</p>
-                        <h5>(Category : Engine)</h5>
-                            <h6>Price: Rs.22,600.00<br>
-                                Course Length: 67 hours<br>
-                                Rating: 5/10<br>
-                                </h6>
-                        <a href="#" class="btn btn-light">Read more..</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-4" style="margin-top: 20px;">
-                <div class="card">
-                    <img src="./../../../assets/images/pt.jpg" height="200" class="card-img-top" alt="...">
-                    <div class="card-body" style="background-color: #43D1F9">
-                        <h5 class="card-title">(MIDATL-337)</h5>
-                        <p class="card-text">OPERATING PRINCIPLES OF MARINE PROPULSION PLANTS </p>
-                        <h5>(Category : Engine)</h5>
-                            <h6>Price: Rs.42,900.00<br>
-                                Course Length: 89 hours<br>
-                                Rating: 7/10<br>
-                                </h6>
 
-                        <a href="#" class="btn btn-light">Read more..</a>
+            <div>
+                <span class="carddisplay"  style="padding :25px; float: left">
+                  <div class="card" style="width: 18rem; height: 30rem; background-color: #f1f1f1; margin-top: 15px;">
+                    <img src="https://npk-server.herokuapp.com/courses/images/image-1612375022838.jpg" height="150px" class="card-img-top" alt="coursepic">
+                    <div class="card-body">
+                      <h5 class="card-title"><a [routerLink]="['coursedetail']" style="cursor: pointer; text-decoration: none; color: #43D1F9;"> GLOBAL MARITIME DISTRESS AND SAFETY SYSTEM</a><sup><span class="badge rounded-pill bg-warning text-dark"
+                            style="font-size: 10px; background-color: #FFD449;"> Safety and security </span></sup> </h5>
+                      <!--<p class="card-text">{{course.About}}</p>-->
+                      <p class="card-text"> <b>Rating:</b>4</p>
+                      <p class="card-text"> <b>Duration:</b> 70 hr</p>
+                      <p class="card-text"> <b>Cost:</b> Rs. 5000 </p>
+                      <div style="position: absolute; bottom: 10px;">
+                        <a style="background-color: #43D1F9; color: white;" class="btn" >Add to cart</a>
+                        <a style="margin-left: 5px; background-color: #43D1F9; color: white;" class="btn">Add to Wishlist</a>
+                      </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                  </div>
+                </span>
+              </div>
+
+              <div>
+                <span class="carddisplay"  style="padding :25px; float: left">
+                  <div class="card" style="width: 18rem; height: 30rem; background-color: #f1f1f1; margin-top: 15px;">
+                    <img src="https://npk-server.herokuapp.com/courses/images/image-1612375937379.jpg" height="150px" class="card-img-top" alt="coursepic">
+                    <div class="card-body">
+                      <h5 class="card-title"><a [routerLink]="['coursedetail']" style="cursor: pointer; text-decoration: none; color: #43D1F9;"> MARINE SAFETY INSTRUCTOR</a><sup><span class="badge rounded-pill bg-warning text-dark"
+                            style="font-size: 10px; background-color: #FFD449;"> Safety and Security </span></sup> </h5>
+                      <!--<p class="card-text">{{course.About}}</p>-->
+                      <p class="card-text"> <b>Rating:</b> 4</p>
+                      <p class="card-text"> <b>Duration:</b> 80hr </p>
+                      <p class="card-text"> <b>Cost:</b> Rs.7000</p>
+                      <div style="position: absolute; bottom: 10px;">
+                        <a style="background-color: #43D1F9; color: white;" class="btn" >Add to cart</a>
+                        <a style="margin-left: 5px; background-color: #43D1F9; color: white;" class="btn">Add to Wishlist</a>
+                      </div>
+                    </div>
+                  </div>
+                </span>
+              </div>
+
+              <div>
+                <span class="carddisplay"  style="padding :25px; float: left">
+                  <div class="card" style="width: 18rem; height: 30rem; background-color: #f1f1f1; margin-top: 15px;">
+                    <img src="https://npk-server.herokuapp.com/courses/images/image-1612376027633.jpg" height="150px" class="card-img-top" alt="coursepic">
+                    <div class="card-body">
+                      <h5 class="card-title"><a [routerLink]="['coursedetail']" style="cursor: pointer; text-decoration: none; color: #43D1F9;"> RADAR OBSERVER (UNLIMITED)</a><sup><span class="badge rounded-pill bg-warning text-dark"
+                            style="font-size: 10px; background-color: #FFD449;"> Offshore</span></sup> </h5>
+                      <!--<p class="card-text">{{course.About}}</p>-->
+                      <p class="card-text"> <b>Rating:</b> 5</p>
+                      <p class="card-text"> <b>Duration:</b> 65hr </p>
+                      <p class="card-text"> <b>Cost:</b> 80000</p>
+                      <div style="position: absolute; bottom: 10px;">
+                        <a style="background-color: #43D1F9; color: white;" class="btn">Add to cart</a>
+                        <a style="margin-left: 5px; background-color: #43D1F9; color: white;" class="btn">Add to Wishlist</a>
+                      </div>
+                    </div>
+                  </div>
+                </span>
+              </div>
+
+              <div>
+                <span class="carddisplay"  style="padding :25px; float: left">
+                  <div class="card" style="width: 18rem; height: 30rem; background-color: #f1f1f1; margin-top: 15px;">
+                    <img src="https://npk-server.herokuapp.com/courses/images/image-1612376107626.jpg" height="150px" class="card-img-top" alt="coursepic">
+                    <div class="card-body">
+                      <h5 class="card-title"><a [routerLink]="['coursedetail']" style="cursor: pointer; text-decoration: none; color: #43D1F9;">FIRST AID & CPR</a><sup><span class="badge rounded-pill bg-warning text-dark"
+                            style="font-size: 10px; background-color: #FFD449;"> Safety and Security </span></sup> </h5>
+                      <!--<p class="card-text">{{course.About}}</p>-->
+                      <p class="card-text"> <b>Rating:</b>4.5</p>
+                      <p class="card-text"> <b>Duration:</b> 30hr</p>
+                      <p class="card-text"> <b>Cost:</b> Rs.5000</p>
+                      <div style="position: absolute; bottom: 10px;">
+                        <a style="background-color: #43D1F9; color: white;" class="btn" >Add to cart</a>
+                        <a style="margin-left: 5px; background-color: #43D1F9; color: white;" class="btn">Add to Wishlist</a>
+                      </div>
+                    </div>
+                  </div>
+                </span>
+              </div>
+
+              <div>
+                <span class="carddisplay"  style="padding :25px; float: left">
+                  <div class="card" style="width: 18rem; height: 30rem; background-color: #f1f1f1; margin-top: 15px;">
+                    <img src="https://npk-server.herokuapp.com/courses/images/image-1612376145142.jpg" height="150px" class="card-img-top" alt="coursepic">
+                    <div class="card-body">
+                      <h5 class="card-title"><a [routerLink]="['coursedetail']" style="cursor: pointer; text-decoration: none; color: #43D1F9;"> ELECTRONIC CHARTING DISPLAY AND INFORMATION SYSTEMS</a><sup><span class="badge rounded-pill bg-warning text-dark"
+                            style="font-size: 10px; background-color: #FFD449;"> Surveying </span></sup> </h5>
+                      <!--<p class="card-text">{{course.About}}</p>-->
+                      <p class="card-text"> <b>Rating:</b> 5</p>
+                      <p class="card-text"> <b>Duration:</b> 30hr</p>
+                      <p class="card-text"> <b>Cost:</b> Rs. 6000</p>
+                      <div style="position: absolute; bottom: 10px;">
+                        <a style="background-color: #43D1F9; color: white;" class="btn" >Add to cart</a>
+                        <a style="margin-left: 5px; background-color: #43D1F9; color: white;" class="btn">Add to Wishlist</a>
+                      </div>
+                    </div>
+                  </div>
+                </span>
+              </div>
+
+              <div>
+                <span class="carddisplay" style="padding :25px; float: left">
+                  <div class="card" style="width: 18rem; height: 30rem; background-color: #f1f1f1; margin-top: 15px;">
+                    <img src="https://npk-server.herokuapp.com/courses/images/image-1612376342453.jpg" height="150px" class="card-img-top" alt="coursepic">
+                    <div class="card-body">
+                      <h5 class="card-title"><a [routerLink]="['coursedetail']" style="cursor: pointer; text-decoration: none; color: #43D1F9;"> BASIC SHIPHANDLING & STEERING CONTROL SYSTEMS</a><sup><span class="badge rounded-pill bg-warning text-dark"
+                            style="font-size: 10px; background-color: #FFD449;"> Shipping </span></sup> </h5>
+                      <!--<p class="card-text">{{course.About}}</p>-->
+                      <p class="card-text"> <b>Rating:</b> 3.8</p>
+                      <p class="card-text"> <b>Duration:</b>40hr</p>
+                      <p class="card-text"> <b>Cost:</b> Rs. 2000</p>
+                      <div style="position: absolute; bottom: 10px;">
+                        <a style="background-color: #43D1F9; color: white;" class="btn" >Add to cart</a>
+                        <a style="margin-left: 5px; background-color: #43D1F9; color: white;" class="btn">Add to Wishlist</a>
+                      </div>
+                    </div>
+                  </div>
+                </span>
+              </div>
+
+              <div>
+                <span class="carddisplay"  style="padding :25px; float: left">
+                  <div class="card" style="width: 18rem; height: 30rem; background-color: #f1f1f1; margin-top: 15px;">
+                    <img src="https://npk-server.herokuapp.com/courses/images/image-1612376384111.jpg" height="150px" class="card-img-top" alt="coursepic">
+                    <div class="card-body">
+                      <h5 class="card-title"><a [routerLink]="['coursedetail']" style="cursor: pointer; text-decoration: none; color: #43D1F9;"> APPRENTICE MATE (STEERSMAN) WESTERN RIVERS NAVIGATION</a><sup><span class="badge rounded-pill bg-warning text-dark"
+                            style="font-size: 10px; background-color: #FFD449;"> Building and Repair </span></sup> </h5>
+                      <!--<p class="card-text">{{course.About}}</p>-->
+                      <p class="card-text"> <b>Rating:</b> 4</p>
+                      <p class="card-text"> <b>Duration:</b> 30hr </p>
+                      <p class="card-text"> <b>Cost:</b> 4800</p>
+                      <div style="position: absolute; bottom: 10px;">
+                        <a style="background-color: #43D1F9; color: white;" class="btn" >Add to cart</a>
+                        <a style="margin-left: 5px; background-color: #43D1F9; color: white;" class="btn">Add to Wishlist</a>
+                      </div>
+                    </div>
+                  </div>
+                </span>
+              </div>
+            <hr style="clear: both; color: white;">
+          </div>
     <br><br>
     <h1 class="display-5" id="about" style=" text-align: center; background-color:#43D1F9 ; padding: 20px;">About Us
     </h1>
